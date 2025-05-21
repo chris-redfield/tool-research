@@ -1,0 +1,24 @@
+version: '3'  # Taskfile API version
+vars:
+  FOLDER: "src"
+tasks:
+  install:
+    desc: "install required project packages"
+    cmds:
+      - pip install -r requirements.txt
+  lint:
+    desc: "Run flake8 for code check"
+    cmds:
+      - flake8 .
+  format:
+    desc: "Format code using Black"
+    cmds:
+      - black "{{.FOLDER}}"
+  test:
+    desc: "Run test suite with Pytest"
+    cmds:
+      - pytest
+  cleanup:
+    desc: "Remove Python cache files"
+    cmds:
+      - find . -name '__pycache__' -type d -exec rm -rf {} +
