@@ -28,7 +28,7 @@ For documentation this is the best in my opinion
 
 5. Arguments are also easy to use, in the same way task argumets are
 
-![alt text](image_just.png)
+![alt text](assets/image_just.png)
 
 ### Do it
 
