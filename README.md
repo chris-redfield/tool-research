@@ -54,4 +54,20 @@ This also creates some .doit files, that bring some extra bloat to the project f
 
 3. doesn't print output by default, easy to write tasks, easy to write multiople lined tasks. yet the more flexible in my opinion, since i am very used to python code. Doesn't let you create tasks named "run"
 
-4. 
+4. By default no, but you can do some tricks, since its python code.
+
+5. 
+
+```console
+def task_format(folder="src"):
+  """Format code using Black"""
+  return {
+    "actions": [
+        f'black {folder}',
+        'echo IT WORKED !!!!!!'
+    ],
+    'verbosity': 2,
+  }
+  ```
+
+  ![alt text](assets/image_doit.png)
