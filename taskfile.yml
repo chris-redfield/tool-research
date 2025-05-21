@@ -14,6 +14,7 @@ tasks:
     desc: "Format code using Black"
     cmds:
       - black "{{.FOLDER}}"
+      - echo "it worked!!!"
   test:
     desc: "Run test suite with Pytest"
     cmds:

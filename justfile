@@ -11,6 +11,7 @@ check-lint:
 
 format folder="src":
   black {{folder}}
+  echo "IT WORKED !!!!!!"
 
 run:
   python src/main.py

@@ -10,9 +10,17 @@ sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
 
 2. simple enough to use and cool to maintain considering its all yaml files.
 
+3. Very easy, just add the tasks at the yaml file one line after the other, or join everything with ; or && in one big line of fun 
+
 4. By defautl state does not carry over lines, but its possible to create multiple lines shells
 
-5. arguments are very easy to define and pass using the yaml
+5. 
+```console
+  format:
+    desc: "Format code using Black"
+    cmds:
+      - black "{{.FOLDER}}"
+```
 
 ![alt text](assets/image_task.png)
 
@@ -24,10 +32,16 @@ For documentation this is the best in my opinion
 
 2. simple enough to use and cool to maintain, doesn't use yaml, uses a more simple approach. Reminds me of Make.
 
+3. Also easy to use, just add the lines one after the other.
+
 4. By default, state does not carry over lines. Like Make, it runs each recipe line in a new shell process. If you have two lines in a recipe, they don’t share state. can if using "\" or "&&" etc
 
-5. Arguments are also easy to use, in the same way task argumets are
-
+5.
+```console
+format folder="src":
+  black {{folder}}
+  echo "IT WORKED !!!!!!"
+```
 ![alt text](assets/image_just.png)
 
 ### Do it
