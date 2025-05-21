@@ -1,17 +1,22 @@
 default: check-lint format test run
 
+# Install packages for project dev
 install:
   pip install -r requirements.txt
 
+# Test the code
 test:
   pytest test/
 
+# Run flake8 for code check
 check-lint:
   flake8 src/
 
+# Format code using Black
 format folder="src":
   black {{folder}}
   echo "IT WORKED !!!!!!"
 
+# Run project code
 run:
   python src/main.py
