@@ -46,4 +46,12 @@ format folder="src":
 
 ### Do it
 
-1. 
+1. easy to install via pip, not so much for os package systems
+
+2. LoL I think this overcomplicates things a bit 
+Even though I love python, I don't think we need more code to maintain / test / run
+This also creates some .doit files, that bring some extra bloat to the project folder"
+
+3. doesn't print output by default, easy to write tasks, easy to write multiople lined tasks. yet the more flexible in my opinion, since i am very used to python code. Doesn't let you create tasks named "run"
+
+4. 
