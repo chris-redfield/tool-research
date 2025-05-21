@@ -6,7 +6,7 @@ tasks:
     desc: "install required project packages"
     cmds:
       - pip install -r requirements.txt
-  lint:
+  check-lint:
     desc: "Run flake8 for code check"
     cmds:
       - flake8 .
@@ -18,6 +18,10 @@ tasks:
     desc: "Run test suite with Pytest"
     cmds:
       - pytest
+  run:
+    desc: "Runs project code"
+    cmds:
+      - python src/main.py
   cleanup:
     desc: "Remove Python cache files"
     cmds:
