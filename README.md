@@ -68,6 +68,31 @@ def task_format(folder="src"):
     ],
     'verbosity': 2,
   }
-  ```
+```
 
   ![alt text](assets/image_doit.png)
+
+  ### mise
+
+  1. easy to install via shell command, apparently it doesn't have package manager way of doing it
+
+  2. uses a .toml file to keep the conf in, very easy to use
+
+  3. Easy to use, just add the lines one after the other.
+
+  4. Not by default, but possible to use env vars for that
+
+  5. 
+```console
+[vars]
+folder = 'src'
+...
+[tasks.format]
+description = ""Format code using Black""
+run = [
+    'black {{arg(name=""folder"", default=""src"")}}',
+    'echo it works !!!'
+]
+```
+
+![alt text](assets/image_mise.png)

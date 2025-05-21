@@ -1,0 +1,25 @@
+[vars]
+folder = 'src'
+
+[tasks.install_now]
+description = "Install packages for project dev"
+run = "pip install -r requirements.txt"
+
+[tasks.test]
+description = "Run test suite with Pytest"
+run = "pytest test/"
+
+[tasks.check-lint]
+description = "Run flake8 for code check"
+run = "flake8 src/"
+
+[tasks.format]
+description = "Format code using Black"
+run = [
+    'black {{arg(name="folder", default="src")}}',
+    'echo it works !!!'
+]
+
+[tasks.run]
+description = "Runs project code"
+run = "python src/main.py"
