@@ -1,4 +1,4 @@
-default: install check-lint format test run
+default: check-lint format test run
 
 # Install packages for project dev
 install:
