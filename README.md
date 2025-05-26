@@ -1,6 +1,20 @@
 # tool-research
 The journey to find a tool for running common project commands
 
+### Introduction
+
+Actions such as linting, formatting, testing, possibly some cleanup, and package building, will be probably run very frequently by project template users. We should provide a standardized way to do this, or at least a centralized spot to collect these command chains.
+
+One alternative is using a Makefile, but that has some perils (like each line running in a separate shell). (stolen from an issue text).
+
+Lets investigate some alternative tools to make, and answer the following questions:
+
+1. Does it require a software install? How easy is it to install?
+2. How easy is it to use once configured?
+3. How easy is it to write tasks? Our tasks are usually just a couple commands one after the other, we don't usually need looping and more complex constructs.
+4. Does state carry over lines? For example, Makefile is known to run each line in a new shell, so state doesn't carry over.
+5. How can the user pass arguments to each task?
+
 ### Task:
 
 1. easy installable through:
